@@ -1,0 +1,4 @@
+<html>
+<iframe src='http://10.0.0.1/vnc/index.html?host=10.0.0.1&port=5577'></iframe>
+<iframe src='http://10.0.0.1/vnc/index.html?host=10.0.0.1&port=5579'></iframe>
+</html>

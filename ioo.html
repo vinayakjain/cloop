@@ -1,0 +1,176 @@
+<html>
+<style type="text/css">
+	.o1
+	{
+		width:400px;
+		height:300px;
+		position: absolute;
+		top: 50px;
+		left: 40px;
+		border-radius: 20px;
+		z-index: 0;
+		
+	}
+	.o2
+	{
+		left:480px;
+	}
+	.o3
+	{
+		left:920px;
+	}
+	.hr
+	{
+		background:black;
+		visibility: hidden;
+		width:100%;
+		height: 100%;
+		
+	}
+	.hh
+	{
+		position: absolute;
+		right: 0px;
+		border-radius: 15px;
+		background: grey;
+		width:120px;
+		height: 80px;
+		border: none;
+		border-radius: 20px;
+		visibility: hidden;
+		font-weight: bold;
+		font-family: Helvetica;
+		font-size: 18px;
+
+	}
+	.gj
+	{
+		position: absolute;
+		top:380px;
+		border-radius:20px;
+		left: 60px;
+		width: 150px;
+		height: 60px;
+		background:grey;
+		font-weight: bold;
+		font-family: Helvetica;
+		font-size: 18px;
+		border: none;
+		z-index: 0;
+
+	}
+	.gj1
+	{
+		left:550px;
+	}
+	.gj2
+	{
+		left:980px;
+	}
+	body
+	{
+		background:url('22.jpg');
+		z-index:-1;
+	}
+</style>
+<script type="text/javascript">
+	function myfun () 
+	{
+		x=document.getElementById('i1');
+		y=document.getElementById('wq')
+		x.style.width="100%";
+		x.style.height="100%";
+		x.style.zIndex="1";
+		x.style.position="absolute";
+		x.style.top="0px";
+		x.style.left="0px";
+		x.borderRadius="0px";
+		y.style.zIndex="1";
+		y.style.visibility="visible"
+	}
+	function funw()
+	{
+		x=document.getElementById('i1');
+		y=document.getElementById('wq')
+		x.style.width="400px";
+		x.style.height="300px";
+		x.style.zIndex="0";
+		x.style.position="absolute";
+		x.style.top="50px";
+		x.style.left="40px";
+		x.borderRadius="20px";
+		y.style.zIndex="0";
+		y.style.visibility="hidden"
+	}
+	function myfunc () 
+	{
+		x=document.getElementById('i2');
+		y=document.getElementById('wq1')
+		x.style.width="100%";
+		x.style.height="100%";
+		x.style.zIndex="1";
+		x.style.position="absolute";
+		x.style.top="0px";
+		x.style.left="0px";
+		x.borderRadius="0px";
+		y.style.zIndex="1";
+		y.style.visibility="visible"
+	}
+	function funwa()
+	{
+		x=document.getElementById('i2');
+		y=document.getElementById('wq1')
+		x.style.width="400px";
+		x.style.height="300px";
+		x.style.zIndex="0";
+		x.style.position="absolute";
+		x.style.top="50px";
+		x.style.left="480px";
+		x.borderRadius="20px";
+		y.style.zIndex="0";
+		y.style.visibility="hidden"
+	}
+	function myfunt () 
+	{
+		x=document.getElementById('i3');
+		y=document.getElementById('wq2')
+		x.style.width="150%";
+		x.style.height="150%";
+		x.style.zIndex="1";
+		x.style.position="absolute";
+		x.style.top="0px";
+		x.style.left="0px";
+		x.borderRadius="0px";
+		y.style.zIndex="1";
+		y.style.visibility="visible"
+	}
+	function funwb()
+	{
+		x=document.getElementById('i3');
+		y=document.getElementById('wq2')
+		x.style.width="400px";
+		x.style.height="300px";
+		x.style.zIndex="0";
+		x.style.position="absolute";
+		x.style.top="50px";
+		x.style.left="920px";
+		x.borderRadius="20px";
+		y.style.zIndex="0";
+		y.style.visibility="hidden"
+	}	
+</script>
+<body>
+
+<iframe id='i1' src="http://10.0.0.1/vnc/index.html?host=10.0.0.1&port=5580" class="o1" ></iframe>
+<button onclick="myfun()" value="mybtn" id="mybt1" class="gj">Expand</button>
+<button onclick="myfunc()" value="mybtq" id="mybt2" class="gj gj1">Expand</button>
+<button onclick="myfunt()" value="mybt" id="mybt3" class="gj gj2">Expand</button>
+<iframe id="i2" src="http://10.0.0.1/vnc/index.html?host=10.0.0.1&port=5575" class="o1 o2"></iframe>
+<iframe id="i3" src="http://10.0.0.1/vnc/index.html?host=10.0.0.1&port=5587" class="o1 o3"></iframe>
+<div class="hr" id="h1">
+<button class="hh" id="wq" onclick="funw()">close</button>
+<button class="hh" id="wq1" onclick="funwa()">close</button>
+<button class="hh" id="wq2" onclick="funwb()">close</button>
+</div>
+</body>
+</html>

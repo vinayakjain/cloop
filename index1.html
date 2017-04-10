@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PaintHouse</title>
+</head>
+<body>
+<div class="s1">
+<pre style="font-size:50px;"><b> PaintHouse</b></pre>
+<hr />
+<ul style="list-style: none;padding:0px;margin-left:0px;" id="uls">
+<li><a href="" style="text-decoration:none">Home</a>&nbsp;&nbsp;</li><li><a href="" style="text-decoration:none">AboutUs</a>&nbsp;&nbsp;</li><li><a href=""style="text-decoration:none">Services</a>&nbsp;&nbsp;</li><li><a href=""style="text-decoration:none">Colors</a></li></ul>
+<hr />
+<div class="container">
+<div style="display:inline-block;">
+<img src="https://placeimg.com/400/200/people"/>
+</div>
+<div>
+     <img src="https://placeimg.com/400/200/any"/>
+    </div>
+</div>
+</body>
+<style>
+
+.s1
+{
+   position: absolute;
+   
+   height: 100%;
+   top: 0px;
+   
+   left: 15%;
+   right: 15%;
+   background:#DCDCDC; 
+   font-style: oblique;
+   font-size: 2.5em;
+   font-family: "Times New Roman", Times, serif;
+   text-decoration:none;
+   
+
+   
+}
+.container {
+  max-width: 400px;
+  background-color: black;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  }
+  .container div {
+  background-color: white;
+  width: 100%;
+  display: inline-block;
+  display: none;
+}
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+#uls li
+{
+	display: inline; 
+  list-style-type: none;
+  font-size: 30px;
+
+}
+
+</style>
+<script type="text/javascript">
+	var currentIndex = 0,
+  items = $('.container div'),
+  itemAmt = items.length;
+
+function cycleItems() {
+  var item = $('.container div').eq(currentIndex);
+  items.hide();
+  item.css('display','inline-block');
+}
+
+var autoSlide = setInterval(function() {
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  cycleItems();
+}, 3000);
+
+$('.next').click(function() {
+  clearInterval(autoSlide);
+  currentIndex += 1;
+  if (currentIndex > itemAmt - 1) {
+    currentIndex = 0;
+  }
+  cycleItems();
+});
+
+$('.prev').click(function() {
+  clearInterval(autoSlide);
+  currentIndex -= 1;
+  if (currentIndex < 0) {
+    currentIndex = itemAmt - 1;
+  }
+  cycleItems();
+});
+</script>
+</html>
